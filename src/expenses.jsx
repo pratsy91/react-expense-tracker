@@ -1,6 +1,8 @@
 import ExpenseItem from "./components/ExpenseItem";
-import React from "react";
+import React, { useState } from "react";
+
 import "./expenses.css";
+import ExpenseFilter from "./components/ExpenseFilter";
 
 const Expenses = () => {
   const expenses = [
@@ -33,9 +35,15 @@ const Expenses = () => {
       Loe: "Adam's Land",
     },
   ];
+
+  const [selectedYear, newSelectedYear] = useState("2019");
+  const selectHandler = (year) => {
+    newSelectedYear(year);
+  };
+
   return (
     <div className="expenses">
-      <h2>Let's get started!</h2>
+      <ExpenseFilter select={selectedYear} onSelect={selectHandler} />
       <ExpenseItem
         etitle={expenses[0].title}
         edate={expenses[0].date}
