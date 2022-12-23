@@ -10,6 +10,7 @@ const ExpenseItem = (props) => {
         <div>Location:{props.eloe}</div>
         <div className="expense-item__price">{props.eamount}</div>
       </div>
+      <button className="expense-item__price btn">Delete</button>
     </div>
   );
 };

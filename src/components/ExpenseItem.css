@@ -36,6 +36,10 @@
   padding: 0.5rem;
   border-radius: 12px;
 }
+.btn {
+  color: whitesmoke;
+  background-color: rgb(98, 39, 18);
+}
 
 @media (min-width: 580px) {
   .expense-item__description {
